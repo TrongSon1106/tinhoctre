@@ -19,7 +19,7 @@ def read_markdown_file(markdown_file):
     #return Path(markdown_file,encoding='utf-8').read_text()
 
 def processed_img(img_path):
-    img=load_img(img_path,target_size=(180,180,3))
+    img=load_img(img_path,target_size=(96,96,3))
     img=img_to_array(img)
     img = img.astype('float32')
     img /= 255.0
