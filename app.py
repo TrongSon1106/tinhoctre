@@ -67,9 +67,9 @@ def run():
                             benh=1
                             
 
-    if benh==1:
-        khoi_u_vd = read_markdown_file("khoi_u_youtube.md")
-        st.markdown(khoi_u_vd, unsafe_allow_html=True)
+    # if benh==1:
+    #     khoi_u_vd = read_markdown_file("khoi_u_youtube.md")
+    #     st.markdown(khoi_u_vd, unsafe_allow_html=True)
 
         
 run()
