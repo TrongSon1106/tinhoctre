@@ -33,8 +33,7 @@ def processed_img(img_path):
     return result
 
 def run():
-    st.markdown('''<h4 style='text-align: left; color: red;'>Phần mềm ứng dụng trí tuệ nhân tạo hỗ trợ nhận dạng khối u trong hình chụp mô
-                (có khối u, không có khối u)</h4>''',
+    st.markdown('''<h4 style='text-align: center; color: green; font-weight: bold;'>AI NHẬN DIỆN KHỐI U Ở MÔ</h4>''',
                 unsafe_allow_html=True)
     #st.title("Phần mềm ứng dụng trí tuệ nhân tạo hỗ trợ nhận dạng một số bệnh về da tại nhà")
     st.write("Tác giả: Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
