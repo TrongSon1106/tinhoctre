@@ -72,11 +72,14 @@ def run():
                 border-radius: 10px;
                 margin-top: 20px;
             }
+            .footer p {
+                margin: 5px 0;
+            }
         </style>
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="header"><h1>AI NHẬN DIỆN KHỐI U Ở MÔ</h1><p>Ứng dụng AI trong y tế</p></div>', unsafe_allow_html=True)
-    st.write("**Contributors:** Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
+
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col1:
@@ -102,6 +105,13 @@ def run():
                             khoi_u = read_markdown_file("khoi_u.md")
                             st.markdown(khoi_u, unsafe_allow_html=True)
 
-    st.markdown('<div class="footer">© 2024 AI Medical Diagnostic. All rights reserved.</div>', unsafe_allow_html=True)
+    st.markdown("""
+        <div class="footer">
+            <p>© 2024 AI Medical Diagnostic. All rights reserved.</p>
+            <p><strong>Contributors</strong></p>
+            <p>Nguyễn Quang Kỳ</p>
+            <p>Hoàng Trọng Sơn</p>
+        </div>
+    """, unsafe_allow_html=True)
 
 run()
