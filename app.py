@@ -15,6 +15,7 @@ def read_markdown_file(markdown_file):
     with open(markdown_file, "r", encoding='utf-8') as f:
         return f.read()
 
+
 def processed_img(img_path):
     img = load_img(img_path, target_size=(96, 96, 3))
     img = img_to_array(img)
@@ -32,6 +33,7 @@ def run():
             body {
                 background-color: #f5f5f5;
                 font-family: 'Arial', sans-serif;
+                overflow-y: scroll;
             }
             .main {
                 background-color: #ffffff;
@@ -40,6 +42,7 @@ def run():
                 box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
                 max-width: 800px;
                 margin: auto;
+                overflow-y: scroll;
             }
             .header {
                 background-color: #0288d1;
@@ -113,7 +116,7 @@ def run():
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="header"><h1>AI NHẬN DIỆN KHỐI U Ở MÔ</h1><p>Ứng dụng AI trong y tế</p></div>', unsafe_allow_html=True)
-    st.write('<div class="main">', unsafe_allow_html=True)
+    st.markdown('<div class="main">', unsafe_allow_html=True)
     st.markdown('<h4>Phát hiện khối u qua ảnh mô học</h4>', unsafe_allow_html=True)
     st.write("**Contributors:** Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
 
