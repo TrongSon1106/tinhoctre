@@ -33,6 +33,15 @@ def processed_img(img_path):
     return result
 
 def run():
+    # logo = Image.open('medical.jpg')
+    # medical_image = Image.open('logo.png')
+    # st.markdown("""
+    #     <div style="display: flex; justify-content: space-between;">
+    #         <div>
+    #             <img src="data:image/png;base64,{logo}" alt="logo" style="height: 60px;">
+    #          </div>
+    #     </div>
+    #     """.format(logo=logo), unsafe_allow_html=True)
     st.markdown('''<h4 style='text-align: center; color: green; font-weight: bold;'>AI NHẬN DIỆN KHỐI U Ở MÔ</h4>''',
                 unsafe_allow_html=True)
     #st.title("Phần mềm ứng dụng trí tuệ nhân tạo hỗ trợ nhận dạng một số bệnh về da tại nhà")
