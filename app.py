@@ -2,7 +2,7 @@ import tensorflow as tf
 import streamlit as st
 from pathlib import Path
 from PIL import Image
-from tensorflow.keras.preprocessing.image import load_img,img_to_array
+from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import numpy as np
 from tensorflow.keras.models import load_model
 import os
@@ -28,6 +28,7 @@ def processed_img(img_path):
     result = classname[y_class]
     return result
 
+
 def run():
     st.markdown("""
         <style>
@@ -38,14 +39,23 @@ def run():
                 background-color: #ffffff;
                 border-radius: 10px;
                 padding: 20px;
+                box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            }
+            .header {
+                background-color: #0288d1;
+                padding: 20px;
+                text-align: center;
+                border-radius: 10px;
+                color: white;
+                margin-bottom: 20px;
             }
             h4 {
                 text-align: center;
-                color: green;
+                color: #0288d1;
                 font-weight: bold;
             }
             .stButton>button {
-                background-color: #4CAF50;
+                background-color: #0288d1;
                 color: white;
                 padding: 10px 24px;
                 border: none;
@@ -55,10 +65,21 @@ def run():
                 margin: 4px 2px;
                 cursor: pointer;
             }
+            .stButton>button:hover {
+                background-color: #0277bd;
+            }
+            .footer {
+                text-align: center;
+                padding: 10px;
+                background-color: #0288d1;
+                color: white;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
         </style>
     """, unsafe_allow_html=True)
 
-    st.markdown('<h4>AI NHẬN DIỆN KHỐI U Ở MÔ</h4>', unsafe_allow_html=True)
+    st.markdown('<div class="header"><h1>AI NHẬN DIỆN KHỐI U Ở MÔ</h1><p>Ứng dụng AI trong y tế</p></div>', unsafe_allow_html=True)
     st.write("**Contributors:** Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
 
     col1, col2, col3 = st.columns([1, 2, 1])
@@ -85,5 +106,6 @@ def run():
                             khoi_u = read_markdown_file("khoi_u.md")
                             st.markdown(khoi_u, unsafe_allow_html=True)
 
+    st.markdown('<div class="footer">© 2024 AI Medical Diagnostic. All rights reserved.</div>', unsafe_allow_html=True)
 
 run()
