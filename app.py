@@ -59,7 +59,7 @@ def run():
     """, unsafe_allow_html=True)
 
     st.markdown('<h4>AI NHẬN DIỆN KHỐI U Ở MÔ</h4>', unsafe_allow_html=True)
-    st.write("**Tác giả:** Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
+    st.write("**Contributors:** Nguyễn Quang Kỳ, Hoàng Trọng Sơn")
 
     col1, col2, col3 = st.columns([1, 2, 1])
     with col1:
