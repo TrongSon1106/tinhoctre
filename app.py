@@ -8,7 +8,7 @@ from tensorflow.keras.models import load_model
 import os
 
 model = load_model("model.h5")
-classname = {0: "Có khối u", 1: "Không có khối u"}
+classname = {0: "Không có khối u", 1: "Có khối u"}
 
 def read_markdown_file(markdown_file):
     with open(markdown_file, "r", encoding='utf-8') as f:
